@@ -44,11 +44,12 @@ export default function Projects(){
                     <Typography><span className="fs-5 text-success">Name: </span>{x.name}</Typography>
                     <Typography><span className="fs-5 text-success">Email: </span>{x.email}</Typography>
                     <Typography><span className="fs-5 text-success">Body: </span>{x.body}</Typography>
-                    <IconButton onClick={()=>{
-                        navigate(`/add/${x.id}`)
-                    }}
-                     color="info"><EditIcon/></IconButton>
+
+                    <div className="text-center">
+                    <IconButton onClick={()=>{navigate(`/add/${x.id}`)}} color="info"><EditIcon/></IconButton>
                     <IconButton onClick={()=>{deletePost(x.id)}} color="error"><DeleteIcon/></IconButton>
+                    </div>
+                    
                 </Box>
             ))}
         </div>
